@@ -34,7 +34,7 @@ def main():
         #listando as opções disponiveis para o ciente
         print("""
 1 - Cadastrar Cliente.
-2 - Verifliicar Clientes.
+2 - Verificar Clientes.
 3 - Remover Cente.
 4 - Registrar Viagem.
 5 - Sair.
