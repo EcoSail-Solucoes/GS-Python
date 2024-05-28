@@ -1,6 +1,6 @@
 **Nomes: Felipe Men dos Santos RM: 557571; Matheus Alcantara Estevão: RM: 558193; Otávio Ferrão: RM 556452**
 
-# Sistema de Cadstro para Viagens
+# Sistema de Cadastro para Viagens
 
 ## Objetivo do Projeto:
 
