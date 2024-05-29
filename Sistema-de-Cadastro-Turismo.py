@@ -27,7 +27,29 @@ def get_cadastro():
         else:
             print("Digite um nome válido.")
 
-
+def destino_viagem(destino):
+    while True:
+        if destino.upper() == "SANTOS":
+            preco = "500,00"
+        elif destino.upper() == "FERNANDO DE NORONHA":
+            preco = "850,00"
+        elif destino.upper() == "RECIFE":
+            preco = "650,00"
+        elif destino.upper() == "MACEIÓ":
+            preco = "550,00"
+        elif destino.upper() == "RIO DE JANEIRO":
+            preco = "700,00"
+        elif destino.upper() == "MIAMI BEACH":
+            preco = "1250,00"
+        resposta = str(input(f'Você escolheu uma viagem com o destino {destino.upper()} por R${preco}, isso está correto?("Sim" ou "Não")'))
+        if resposta.upper() == "SIM":
+            return True
+        elif resposta.upper() == "NÃO" or resposta.upper() == "NAO":
+            print("Por favor, confirme sua viagem.")
+            return False
+        else:
+            print("Opção Inválida.")
+            continue
 
 def main():
     while True:
@@ -35,7 +57,7 @@ def main():
         print("""
 1 - Cadastrar Cliente.
 2 - Verificar Clientes.
-3 - Remover Cente.
+3 - Remover Cliente.
 4 - Registrar Viagem.
 5 - Sair.
 """)
@@ -63,94 +85,18 @@ def main():
                     print(f"{(indice + 1)} - {viagem}")
 
                 #pede para o usuario escolher uma das opções para realizar o pagamento da viagem
-                escolher_viagem = int(input("Escolha uma das opções(Digite o número da viagem): "))
-
-                match escolher_viagem:
-                    #faz o pagamento com pix e limpa a lista do cadastro para poder realizar outra viagem se desejado
-                    case 1:
-                        print("")
-                        print("Viagem selecionada: Santos")
-                        print("Preço Total: R$500,00")
-                        print("Clientes registrados:")
-                        for i in cadastros:
-                            print(i)
-                        confirmar = str(input("Pagar com PIX?(Sim ou Não) "))
-                        if confirmar.upper() == "SIM":
-                            print("Código PIX(CNPJ): 92.958.800/0001-38")
-                            cadastros.clear()
-                        else:
-                            print("Pagamente cancelado!")
-                            break
-                    case 2:
-                        print("")
-                        print("Viagem selecionada: Fernando de Noronha")
-                        print("Preço Total: R$850,00")
-                        print("Clientes Registrados:")
-                        for i in cadastros:
-                            print(i)
-                        confirmar = str(input("Pagar com PIX?(Sim ou Não) "))
-                        if confirmar.upper() == "SIM":
-                            print("Código PIX(CNPJ): 92.958.800/0001-38")
-                            cadastros.clear()
-                        else:
-                            print("Pagamente cancelado!")
-                            break
-                    case 3:
-                        print("")
-                        print("Viagem selecionada: Recife")
-                        print("Preço Total: R$650,00")
-                        print("Clientes Registrados:")
-                        for i in cadastros:
-                            print(i)
-                        confirmar = str(input("Pagar com PIX?(Sim ou Não) "))
-                        if confirmar.upper() == "SIM":
-                            print("Código PIX(CNPJ): 92.958.800/0001-38")
-                            cadastros.clear()
-                        else:
-                            print("Pagamente cancelado!")
-                            break
-                    case 4:
-                        print("")
-                        print("Viagem selecionada: Maceió")
-                        print("Preço Total: R$550,00")
-                        print("Clientes Registrados:")
-                        for i in cadastros:
-                            print(i)
-                        confirmar = str(input("Pagar com PIX?(Sim ou Não) "))
-                        if confirmar.upper() == "SIM":
-                            print("Código PIX(CNPJ): 92.958.800/0001-38")
-                            cadastros.clear()
-                        else:
-                            print("Pagamente cancelado!")
-                            break
-                    case 5:
-                        print("")
-                        print("Viagem selecionada: Rio de Janeiro")
-                        print("Preço Total: R$700,00")
-                        print("Clientes Registrados:")
-                        for i in cadastros:
-                            print(i)
-                        confirmar = str(input("Pagar com PIX?(Sim ou Não) "))
-                        if confirmar.upper() == "SIM":
-                            print("Código PIX(CNPJ): 92.958.800/0001-38")
-                            cadastros.clear()
-                        else:
-                            print("Pagamente cancelado!")
-                            break
-                    case 6:
-                        print("")
-                        print("Viagem selecionada: Miami Beach")
-                        print("Preço Total: R$1250,00")
-                        print("Clientes Registrados:")
-                        for i in cadastros:
-                            print(i)
-                        confirmar = str(input("Pagar com PIX?(Sim ou Não) "))
-                        if confirmar.upper() == "SIM":
-                            print("Código PIX(CNPJ): 92.958.800/0001-38")
-                            cadastros.clear()
-                        else:
-                            print("Pagamente cancelado!")
-                            break
+                destino = str(input("Escolha uma das opções(Digite o destino da viagem): "))
+                confirmacao_viagem = destino_viagem(destino)
+                if confirmacao_viagem:
+                    pagamento = str(input('Deseja pagar com PIX ou Cartão de Débito?(Se a o pagamento for com PIX 20% do valor sera usado para ajudar a limpar as praias que fazem parte da nossa campanha e também ajuda a limpar os oceanos que foram afetados com as enchentes no Rio Grande do Sul "Digite PIX ou Cartão") '))
+                    if pagamento.upper() == "PIX":
+                        print("PIX(CNPJ): 92.958.800/0001-38")
+                        time.sleep(2)
+                        print("Pagamento confirmado! Obrigado por manter nosso planeta mais limpo!")
+                    elif pagamento.upper() == "CARTÃO" or pagamento.upper() == "CARTAO":
+                        print("Processando pagamento...")
+                        time.sleep(2)
+                        print("Pagamento confirmado!")
             case 5: #finalza o programa
                 print("Obrigado por usar o nosso programa de cadastro!")
                 break
