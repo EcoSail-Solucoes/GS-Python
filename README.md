@@ -11,23 +11,13 @@ Criamos um projeto com o objetivo de cadastrar pessoas em um sistema para realiz
 O programa inicia criando as váriaveis de listas utilizadas no programa.
 Logo após ele cumprimenta o cliente com "Seja Bem-Vindo(a)" e da uma delay de 1 segundo para continuar o código.
 
-![image](https://github.com/EcoSail-Solucoes/GS-Python/assets/153327403/8a788efd-28f0-4b7f-9b9a-e0f34a434481)
-
 Depois ele cria uma função usada para cadastrar um cliente, usando os dados fornecidos pelo usuário pelo usuário.
-
-![image](https://github.com/EcoSail-Solucoes/GS-Python/assets/153327403/89648b23-4b94-4124-8f37-5d7de0a593b5)
 
 Após criar a função de cadastrar o cliente, ele cria a função main() que é usada para listar as opções do cliente: Cadastrar Cliente, Verificar Clientes, Viagens, Registrar Empresas, Verificar Empresas e Sair.
 
-![image](https://github.com/EcoSail-Solucoes/GS-Python/assets/153327403/cea9c8e8-44f3-4ac1-abd0-b2d0071f10c6)
-
 Utilizando uma variável para guardar a opção do cliente, o programa começa a verificar as opções para realizar o pedido do cliente.
 
-![image](https://github.com/EcoSail-Solucoes/GS-Python/assets/153327403/65d2484f-032e-426c-b481-3279d0fb988b)
-
-Implementando a função do match case o programa le a variavél das opçôes e continua o código.
-
-![image](https://github.com/EcoSail-Solucoes/GS-Python/assets/153327403/91425e5e-0cf3-46b9-a830-d0309f9e49e5)
+Implementando a função do match case, o programa le a variavél das opçôes e continua o código.
 
 Se o usuário escolher a opção de cadastrar um cliente, o programa roda a função **get_cadastro()**, a qual apaga o cadastro do ultimo cliente e adiciona a reposta do usuário na lista **"cliente"** para no final, adicionar a lista cliente na lista **"cadastros"**.
 
