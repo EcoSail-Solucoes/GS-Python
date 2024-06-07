@@ -19,6 +19,11 @@ Este projeto é um sistema de cadastro de clientes e empresas, além de permitir
 1. Clone o repositório ou copie o código para sua máquina local.
 2. Execute o script Python.
 
+## Vídeo Demonstrativo
+Assista ao vídeo demonstrativo no YouTube para entender melhor como o sistema funciona:
+[![Vídeo Demonstrativo](https://img.youtube.com/vi/ANj6ZEOkGH8/0.jpg)](https://www.youtube.com/watch?v=ANj6ZEOkGH8)
+
+
 ## Código
 
 ```python
